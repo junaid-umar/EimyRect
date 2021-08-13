@@ -1,3 +1,5 @@
+[![Android Build](https://github.com/junaid-umar/EimyRect/actions/workflows/main_ci.yml/badge.svg)](https://github.com/junaid-umar/EimyRect/actions/workflows/main_ci.yml)
+
 # Welcome to Largest Rectanngle Finder
 
 It's a flip board game built using the Clean Architecture and MVVM.
@@ -37,3 +39,7 @@ This applications has continuous integration using GitHub actions
 ## Backlog
 
 UI Test and UI improvement
+
+## Screenshots
+
+<img src="images/screen1.jpeg" width=200> 
