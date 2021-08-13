@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="itemClickListener"
+            type="com.eimy.rect.presentation.rectangle.board.OnClickListener" />
+
+        <variable
+            name="position"
+            type="int" />
+
+        <variable
+            name="rectangle"
+            type="com.eimy.rect.presentation.model.RectangleType" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/rectangle_at_the_top"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:onClick="@{()-> itemClickListener.onClick(position)}"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:viewColor="@{rectangle}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
