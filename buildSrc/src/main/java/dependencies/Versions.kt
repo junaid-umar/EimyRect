@@ -30,5 +30,7 @@ object Versions {
     const val mockk = "1.12.0"
     const val flow_turbine = "0.6.0"
     const val core_testing = "2.1.0"
+    const val junit4 = "1.1.1"
+    const val test_core = "1.4.0"
 
 }

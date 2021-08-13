@@ -34,7 +34,8 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = Versions.jvmTarget
+        useIR = true
     }
     buildFeatures {
         dataBinding true
@@ -61,10 +62,12 @@ dependencies {
     testImplementation Test.jupiter_api
     testImplementation Test.truth_google
     testImplementation Test.mockk
-
-
     testImplementation Test.coroutine_test
     testImplementation Test.core_testing
     testImplementation Test.flow_turbine
 
+    androidTestImplementation Test.junit4
+    androidTestImplementation Test.test_core
+    androidTestImplementation Test.core_testing
+    androidTestImplementation Test.test_runner
 }
