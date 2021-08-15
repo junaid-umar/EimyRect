@@ -35,6 +35,8 @@ This applications has continuous integration using GitHub actions
   5.  Navigation Component - User 
   6.  Junit, mockk, flow turbine, Truth 
 
+## NOTE
+**Domain Layer model was developer to pass array and return modified array with highlighted rectangles.
 
 ## Backlog
 
