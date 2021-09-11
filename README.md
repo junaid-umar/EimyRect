@@ -20,11 +20,7 @@ This layer contains pure business logic independent of platform and independent 
 This layer contains android specific code. it handles user interactions and actions.
 
 
-## Test
-This applications is covered with unit Test.
 
-## CI
-This applications has continuous integration using GitHub actions
 
 
 ## Libraries
@@ -44,4 +40,4 @@ UI Test and UI improvement
 
 ## Screenshots
 
-<img src="images/screen1.jpeg" width=200> 
+<img src="images/image1.jpeg" width=200> <img src="images/image2.jpeg" width=200> 
