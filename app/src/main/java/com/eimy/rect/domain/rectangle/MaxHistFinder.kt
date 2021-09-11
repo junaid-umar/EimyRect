@@ -5,10 +5,10 @@ import java.util.*
 
 object MaxHistFinder {
 
-    fun maxHist(row: IntArray): Int {
+    fun maxHist(row: IntArray, rowNum: Int): Pair<Int, List<Pair<Int, IntArray>>> {
 
         val result = Stack<Int>()
-        var maxArea = 0
+        var maxArea: Pair<Int, List<Pair<Int, IntArray>>> = Pair(0, listOf())
         var i = 0
         while (i < BOARD_SIZE) {
 
@@ -19,12 +19,12 @@ object MaxHistFinder {
 
             } else {
 
-                maxArea = getMaxArea(row, result, i, maxArea)
+                maxArea = getMaxArea(row, result, i, maxArea, rowNum)
             }
         }
 
         while (!result.empty()) {
-            maxArea = getMaxArea(row, result, i, maxArea)
+            maxArea = getMaxArea(row, result, i, maxArea, rowNum)
         }
         return maxArea
     }
@@ -33,13 +33,29 @@ object MaxHistFinder {
         row: IntArray,
         result: Stack<Int>,
         index: Int,
-        maxArea: Int,
-    ): Int {
-        val topValue = row[result.peek()]
+        maxArea: Pair<Int, List<Pair<Int, IntArray>>>,
+        rowNum: Int,
+    ): Pair<Int, List<Pair<Int, IntArray>>> {
+
+        val peakIndex = result.peek()
+        val topValue = row[peakIndex]
         result.pop()
+
         var area = topValue * index
-        if (!result.empty()) area = topValue * (index - result.peek() - 1)
-        return maxOf(area, maxArea)
+
+        if (!result.empty()) {
+            area = topValue * (index - result.peek() - 1)
+        }
+        return if (area > maxArea.first) {
+            val rectangleLocation = mutableListOf<Pair<Int, IntArray>>()
+            listOf(0 until topValue).flatten().map {
+                rectangleLocation.add(Pair(rowNum - it,
+                    (peakIndex until index).toList().toIntArray()))
+            }
+            Pair(area, rectangleLocation)
+        } else {
+            maxArea
+        }
     }
 
 

@@ -16,7 +16,7 @@ class BoardGridAdapter(val clickListener: OnClickListener) :
     companion object :
         DiffUtil.ItemCallback<RectangleType>() {
         override fun areItemsTheSame(oldItem: RectangleType, newItem: RectangleType) =
-            oldItem == newItem
+            false
 
         override fun areContentsTheSame(oldItem: RectangleType, newItem: RectangleType) =
             false

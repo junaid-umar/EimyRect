@@ -36,6 +36,7 @@ fun Int.toRectangleType(): RectangleType {
     return when (this) {
         0 -> RectangleType.NOT_SELECTED
         1 -> RectangleType.SELECTED
+        2 -> RectangleType.LARGEST
         else -> RectangleType.SELECTED
     }
 }
