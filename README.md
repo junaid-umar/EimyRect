@@ -2,7 +2,7 @@
 
 # Welcome to Largest Rectanngle Finder
 
-It's a flip board game built using the Clean Architecture and MVVM.
+It's a flip board game built using the Clean Architecture and MVVM. App finds largest rectangle and highlights it.
 
 
 ## Architecture
@@ -31,12 +31,10 @@ This layer contains android specific code. it handles user interactions and acti
   5.  Navigation Component - User 
   6.  Junit, mockk, flow turbine, Truth 
 
-## NOTE
-**Domain Layer model was developed to pass array and return modified array with highlighted rectangles.**
 
 ## Backlog
 
-UI Test and UI improvement
+Test
 
 ## Screenshots
 
