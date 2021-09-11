@@ -1,5 +1,3 @@
-[![Android Build](https://github.com/junaid-umar/EimyRect/actions/workflows/main_ci.yml/badge.svg)](https://github.com/junaid-umar/EimyRect/actions/workflows/main_ci.yml)
-
 # Welcome to Largest Rectanngle Finder
 
 It's a flip board game built using the Clean Architecture and MVVM. App finds largest rectangle and highlights it.
