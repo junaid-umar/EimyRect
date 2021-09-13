@@ -13,11 +13,9 @@ object RectangleFinder {
 
         val result = maxHistRectangles(rectangleList.map { it.copyOf() })
 
-        result.second.map {
-        }
-        result.second.mapIndexed { f, largIndex ->
-            largIndex.second.map { column ->
-                rectangleList[largIndex.first][column] = 2
+        result.second.map {largestRectangle ->
+            largestRectangle.second.map { column ->
+                rectangleList[largestRectangle.first][column] = 2
             }
         }
 
@@ -41,7 +39,7 @@ object RectangleFinder {
                     if (rectangleList[i][j] == 1) rectangleList[i][j] += rectangleList[i - 1][j]
                 }
                 val rowResult = maxHist(rectangleList[i], i)
-                result = if (result.first > rowResult.first)
+                result = if (result.first < rowResult.first)
                     result
                 else
                     rowResult
